@@ -41,7 +41,6 @@ import android.telephony.PhoneNumberUtils;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.suda.utils.SudaUtils;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.ListAdapter;
@@ -66,6 +65,7 @@ import com.android.incalluibind.ObjectFactory;
 import java.lang.ref.WeakReference;
 
 import static com.android.contacts.common.compat.CallSdkCompat.Details.PROPERTY_ENTERPRISE_CALL;
+import android.suda.utils.SudaUtils;
 /**
  * Presenter for the Call Card Fragment.
  * <p>
