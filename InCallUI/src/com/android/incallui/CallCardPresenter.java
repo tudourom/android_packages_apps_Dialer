@@ -348,6 +348,15 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi> i
             Log.d(this, "Starting the calltime timer");
             mPrimary.triggerCalcBaseChronometerTime();
             mCallTimer.start(CALL_TIME_UPDATE_INTERVAL_MS);
+            if (!mIsRecording && isEnabled && !isVideo && CallButtonFragment.getInstance() != null) {
+                mIsRecording = true;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        CallButtonFragment.getInstance().callRecordClicked(true);
+                    }
+                }, 500);
+            }
         } else {
             Log.d(this, "Canceling the calltime timer");
             mCallTimer.cancel();
